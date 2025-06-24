@@ -11,9 +11,13 @@ public class Order {
 
     @NotBlank(message="El nombre es obligatorio")
     private String deliveryName;
+    @NotBlank(message = "La calle es obligatoria")
     private String deliveryStreet;
+    @NotBlank(message = "La ciudad es obligatoria")
     private String deliveryCity;
+    @NotBlank(message = "El state es obligatorio")
     private String deliveryState;
+    @NotBlank(message = "El zip es obligatorio")
     private String deliveryZip;
 
     @CreditCardNumber(message="No es una tarjeta valida!")
