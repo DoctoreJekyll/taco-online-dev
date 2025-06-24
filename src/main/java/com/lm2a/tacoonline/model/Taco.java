@@ -8,7 +8,9 @@ import java.util.List;
 
 @Data
 public class Taco {
+    private long id;
+    private Data createdAt;
     @Size(min = 5, max = 50, message="El nombre debe tener al menos 5 caracteres")
     private String name;
-    private List<String> ingredients;
+    private List<Ingredient> ingredients;
 }
