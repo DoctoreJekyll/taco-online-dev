@@ -7,4 +7,8 @@ Dia 25
 - Ahora vamos a ver a lanzar errores personalizados, hemos creado un html simple para mostrar los mensajes y un ErrorController que llame a ese html
 - De ultima ha habido más historias y esta hablando sobre la importancia de los "microservicios", lo más probable comenta que será que acabemos trabajando haciendo microservicios y que de hecho es como tiene a su juniors en su pryecto, haciendo microservicios con java y spring.
 - Estos ultimos 20 min vamos a empezar a migrar la app a JPA, primero cambiar los modelos a entidades, lo de poner @entity y tal tal
-- 
+- Agregamos dependencia jpa en el pom
+- Cambiamos los modelos a entidades
+- Para eso, poner el entity y poner un @Id a nuestra PK ademas de otras etiquetas como getter setter allconstructor etc
+- @Enumerated(EnumType.STRING) --> Esto es para montar enums
+- No dio tiempo de ver mas, porque al parecer hemos visto con Carlos JPA con Spring y con Mario vamos a ver JPA con Spring Boot y tienes ciertas diferencias

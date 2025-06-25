@@ -1,15 +1,25 @@
 package com.lm2a.tacoonline.model;
 
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 @RequiredArgsConstructor
+@Entity
 public class Ingredient {
-    private final String id;
-    private final String name;
-    private final Type type;
+    @Id
+    private String id;
+    private String name;
+    @Enumerated(EnumType.STRING)
+    private Type type;
 
     public static enum Type {
         WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
