@@ -34,6 +34,8 @@ public class DesignTacoController {
 
     @GetMapping
     public String showDesignForm(Model model) {
+        int x = 0;
+        int y = 1/x;
 
         fillModelWithIngredients(model);
 
