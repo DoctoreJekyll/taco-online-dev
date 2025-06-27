@@ -13,20 +13,20 @@ import org.springframework.web.context.request.WebRequest;
 
 import java.util.Map;
 
-@Slf4j
-@Controller
-@RequiredArgsConstructor
-public class MyErrorController implements ErrorController {
-
-    private final ErrorAttributes errorAttributes;
-    private final WebRequest webRequest;
-
-    @RequestMapping("/error")
-    public String handleError(WebRequest request, Model model) {
-        log.error("Fallo de la app");
-        Map<String, Object> errorAttributesMap = errorAttributes.getErrorAttributes(webRequest, ErrorAttributeOptions.of(ErrorAttributeOptions.Include.STACK_TRACE, ErrorAttributeOptions.Include.PATH, ErrorAttributeOptions.Include.ERROR));
-        model.addAttribute("msg", errorAttributesMap.get("error"));
-        model.addAttribute("url", errorAttributesMap.get("path"));
-        return "error";
-    }
-}
+//@Slf4j
+//@Controller
+//@RequiredArgsConstructor
+//public class MyErrorController implements ErrorController {
+//
+//    private final ErrorAttributes errorAttributes;
+//    private final WebRequest webRequest;
+//
+//    @RequestMapping("/error")
+//    public String handleError(WebRequest request, Model model) {
+//        log.error("Fallo de la app");
+//        Map<String, Object> errorAttributesMap = errorAttributes.getErrorAttributes(webRequest, ErrorAttributeOptions.of(ErrorAttributeOptions.Include.STACK_TRACE, ErrorAttributeOptions.Include.PATH, ErrorAttributeOptions.Include.ERROR));
+//        model.addAttribute("msg", errorAttributesMap.get("error"));
+//        model.addAttribute("url", errorAttributesMap.get("path"));
+//        return "error";
+//    }
+//}

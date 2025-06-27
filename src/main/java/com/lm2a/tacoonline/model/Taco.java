@@ -4,11 +4,17 @@ package com.lm2a.tacoonline.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
 
-@Data
+//@Data
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 public class Taco {
     @Id
