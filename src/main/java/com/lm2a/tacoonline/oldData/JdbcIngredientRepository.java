@@ -1,4 +1,4 @@
-package com.lm2a.tacoonline.data;
+package com.lm2a.tacoonline.oldData;
 
 import com.lm2a.tacoonline.model.Ingredient;
 import lombok.RequiredArgsConstructor;

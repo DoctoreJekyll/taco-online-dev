@@ -1,4 +1,4 @@
-package com.lm2a.tacoonline.data;
+package com.lm2a.tacoonline.oldData;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lm2a.tacoonline.model.Order;
@@ -7,7 +7,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
-import javax.sql.DataSource;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;

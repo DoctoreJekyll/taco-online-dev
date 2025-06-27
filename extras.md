@@ -12,3 +12,20 @@ Dia 25
 - Para eso, poner el entity y poner un @Id a nuestra PK ademas de otras etiquetas como getter setter allconstructor etc
 - @Enumerated(EnumType.STRING) --> Esto es para montar enums
 - No dio tiempo de ver mas, porque al parecer hemos visto con Carlos JPA con Spring y con Mario vamos a ver JPA con Spring Boot y tienes ciertas diferencias
+
+
+DIA 26
+-
+- Quien no mira a los ojos no es de fiar, mirad a los ojos en las entrevistas
+- Podemos tener varias entrevistas (lo de mi piruleta)
+- Tipos de entrevistas y entrevistadores, bajar o no la guardia
+- La de, no he encontrado trabajo porque no tendría totalmente las habilidades necesarias pero las he conseguido y estoy preparado para este puesto
+- Importante hacer preguntas sobre condiciones, contrato, dinero, equipo.
+- Tendremos una reunion on Irene que estará con nosotros mentorizando la busqueda de empleo despues del curso
+
+DIA 27
+-
+- Vamos a terminar la app de tacos añadiendole JPA
+- @ManyToMany(targetEntity = Ingredient.class) Otra forma de hacer lo del mapped by y enlazar tablas manytomany
+- @PrePersist Esto hace que los metodos que pongamos con esto pasen directamente a persistencia(a guardarse en la base de datos), lo hemos usado con la fecha para registrar la fecha justo en el momento de creacion del taco
+- 
