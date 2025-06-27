@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 import com.lm2a.tacoonline.model.Ingredient.Type;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,8 +33,8 @@ public class DesignTacoController {
 
     @GetMapping
     public String showDesignForm(Model model) {
-        int x = 0;
-        int y = 1/x;
+//        int x = 0;
+//        int y = 1/x;
 
         fillModelWithIngredients(model);
 
