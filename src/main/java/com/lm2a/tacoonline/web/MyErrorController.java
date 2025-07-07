@@ -21,7 +21,7 @@ public class MyErrorController implements ErrorController {
     private final ErrorAttributes errorAttributes;
     private final WebRequest webRequest;
 
-    @RequestMapping("/error")
+    @RequestMapping("/no")
     public String handleError(WebRequest request, Model model) {
         log.error("Fallo de la app");
         Map<String, Object> errorAttributesMap = errorAttributes.getErrorAttributes(webRequest, ErrorAttributeOptions.of(ErrorAttributeOptions.Include.STACK_TRACE, ErrorAttributeOptions.Include.PATH, ErrorAttributeOptions.Include.ERROR));

@@ -1,6 +1,7 @@
 package com.lm2a.tacoonline.api;
 
 import com.lm2a.tacoonline.data.TacoRepository;
+import com.lm2a.tacoonline.exceptions.TacoNotFoundException;
 import com.lm2a.tacoonline.model.Taco;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
@@ -74,16 +75,8 @@ public class ApiTacoController {
     @PutMapping()
     public ResponseEntity<Taco> updateTaco(@RequestBody Taco taco)
     {
-        Optional<Taco> tacoOptional = tacoRepository.findById(taco.getId());
-        if (tacoOptional.isPresent()) {
-            Taco tacoToUpdate = tacoOptional.get();
-            tacoToUpdate.setName(taco.getName());
-            tacoToUpdate.setIngredients(taco.getIngredients());
-
-            tacoRepository.save(tacoToUpdate);
-            return new ResponseEntity<>(tacoToUpdate, HttpStatus.OK);
-        }
-
-        return  new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        Taco savedTaco = tacoRepository.findById(taco.getId()).orElseThrow(TacoNotFoundException::new);
+        Taco tacoUpdated = tacoRepository.save(savedTaco);
+        return new ResponseEntity<>(tacoUpdated, HttpStatus.OK);
     }
 }
