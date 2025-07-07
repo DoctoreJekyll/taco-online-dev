@@ -28,4 +28,12 @@ DIA 27
 - Vamos a terminar la app de tacos añadiendole JPA
 - @ManyToMany(targetEntity = Ingredient.class) Otra forma de hacer lo del mapped by y enlazar tablas manytomany
 - @PrePersist Esto hace que los metodos que pongamos con esto pasen directamente a persistencia(a guardarse en la base de datos), lo hemos usado con la fecha para registrar la fecha justo en el momento de creacion del taco
-- 
+- Hemos adaptado finalmente el proyecto a jpa, basicamente metiendo entidades y cambiando los repos para que extiendan en este caso de crudrepository y no jparepository pero al final jparepo extiende a su vez de crudrepo
+- Ahora vamos a ver las API Rest.
+- ![image.png](src/main/resources/image.png)
+- Estos serian los principales verbos/etiquetas usadas en una API REST
+- Ahora vamos a montar una API REST
+- Hemos visto el concepto de ResponseEntity
+- Estamos probando errores usando clases del ResponseEntity
+- Hemos hecho todo el crud de taco pero usando ResponseEntity y un RestController y no Controller que es el proceso para hacer API REST
+- Es decir hacer los metodos de la foto de arriba

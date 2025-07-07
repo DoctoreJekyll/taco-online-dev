@@ -11,7 +11,6 @@ import java.util.Optional;
 @Component
 @RequiredArgsConstructor
 public class IngredientByIdConverter implements Converter<String, Ingredient> {
-
     final IngredientRepository ingredientRepository;
 
     @Override
